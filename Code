@@ -12,7 +12,7 @@ CMD:getcoin(playerid, params[])
 {
 	PlayerInfo[playerid][pLogin] == 0) return true; 
 	PlayerInfo[playerid][pAdmin] < 9) return true; 
-	if(sscanf(params, "ud,params[0],params[1])SendClientMessage(playerid,-1,"Daweret: /givecoin [id Motamashis] [Coin Raodenoba]);
+	if(sscanf(params, "ud,params[0],params[1]) SendClientMessage(playerid,-1,"Daweret: /givecoin [id Motamashis] [Coin Raodenoba]);
 	PlayerInfo[params[0]][pCoin] += params[1]
 	format(YCMDstr, sizeof(YCMDstr), "Tqven Gadaecit Motamashe %s[%d] Coin Raodenobit: %d",Name(params[0],params[0],params[1]);
 	SenClientMessage(playerid,-1,YCMDstr);
@@ -32,32 +32,31 @@ CMD:trade(playerid, params[])
 	{
 	    	if(response)
 	      	{
-				switch(listitem)
+			switch(listitem)
 		      	{
-			
-					case 0:
-					{
-			 	   	if(PlayerInfo[playerid][pLogin] == 0) return true;
-			   	   	if(PlayerInfo[playerid][pCoin] <= 1) return true;
-			   	   	PlayerInfo[playerid][pCoin] -= 1;
-			    	PlayerInfo[playerid][pCash] += 4000000;
-			    	SendClientMessage(playerid,-1,"Tqven Gadmogecat 4kk, -1Coin);
+			        case 0:
+				{
+			   		if(PlayerInfo[playerid][pLogin] == 0) return true;
+			     		if(PlayerInfo[playerid][pCoin] <= 1) return true;
+					PlayerInfo[playerid][pCoin] -= 1;
+			    		PlayerInfo[playerid][pCash] += 4000000;
+			    		SendClientMessage(playerid,-1,"Tqven Gadmogecat 4kk, -1Coin);
 				}
 				case 1:
 				{
-			    	if(PlayerInfo[playerid][pLogin] == 0) return true;
-			    	if(PlayerInfo[playerid][pCoin] <= 2) return true;
-			    	PlayerInfo[playerid][pCoin] -= 2;
-			    	PlayerInfo[playerid][pCash] += 8000000;
-			    	SendClientMessage(playerid,-1,"Tqven Gadmogecat 8kk, -2Coin);
+			    		if(PlayerInfo[playerid][pLogin] == 0) return true;
+			    		if(PlayerInfo[playerid][pCoin] <= 2) return true;
+			    		PlayerInfo[playerid][pCoin] -= 2;
+			    		PlayerInfo[playerid][pCash] += 8000000;
+			    		SendClientMessage(playerid,-1,"Tqven Gadmogecat 8kk, -2Coin);
 				}
 				case 2: 
 				{
-			    	if(PlayerInfo[playerid][pLogin] == 0) return true;
-			    	if(PlayerInfo[playerid][pCoin] <= 3) return true;
-			   	    PlayerInfo[playerid][pCoin] -= 3;
-			    	PlayerInfo[playerid][pCash] += 12000000;
-			    	SendClientMessage(playerid,-1,"Tqven Gadmogecat 12kk, -3Coin);
+			    		if(PlayerInfo[playerid][pLogin] == 0) return true;
+			    		if(PlayerInfo[playerid][pCoin] <= 3) return true;
+			   	    	PlayerInfo[playerid][pCoin] -= 3;
+			    		PlayerInfo[playerid][pCash] += 12000000;
+			    		SendClientMessage(playerid,-1,"Tqven Gadmogecat 12kk, -3Coin);
 				}		
 			}
 		}
